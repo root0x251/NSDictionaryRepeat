@@ -15,6 +15,7 @@
 		F90E8BD61E0AC23A00199830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90E8BD41E0AC23A00199830 /* LaunchScreen.storyboard */; };
 		F90E8BE11E0AC23A00199830 /* NSDictionaryRepeatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F90E8BE01E0AC23A00199830 /* NSDictionaryRepeatTests.m */; };
 		F90E8BEC1E0AC23A00199830 /* NSDictionaryRepeatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F90E8BEB1E0AC23A00199830 /* NSDictionaryRepeatUITests.m */; };
+		F90E8BFB1E0AC26200199830 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = F90E8BFA1E0AC26200199830 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		F90E8BE71E0AC23A00199830 /* NSDictionaryRepeatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSDictionaryRepeatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F90E8BEB1E0AC23A00199830 /* NSDictionaryRepeatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryRepeatUITests.m; sourceTree = "<group>"; };
 		F90E8BED1E0AC23A00199830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F90E8BF91E0AC26200199830 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = ../Student.h; sourceTree = "<group>"; };
+		F90E8BFA1E0AC26200199830 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = ../Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				F90E8BC91E0AC23A00199830 /* AppDelegate.h */,
 				F90E8BCA1E0AC23A00199830 /* AppDelegate.m */,
+				F90E8BF91E0AC26200199830 /* Student.h */,
+				F90E8BFA1E0AC26200199830 /* Student.m */,
 				F90E8BCC1E0AC23A00199830 /* ViewController.h */,
 				F90E8BCD1E0AC23A00199830 /* ViewController.m */,
 				F90E8BCF1E0AC23A00199830 /* Main.storyboard */,
@@ -276,6 +281,7 @@
 				F90E8BCE1E0AC23A00199830 /* ViewController.m in Sources */,
 				F90E8BCB1E0AC23A00199830 /* AppDelegate.m in Sources */,
 				F90E8BC81E0AC23A00199830 /* main.m in Sources */,
+				F90E8BFB1E0AC26200199830 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

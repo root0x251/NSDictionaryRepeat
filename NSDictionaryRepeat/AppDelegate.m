@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Student.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,51 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    Уровень Ученик.
+//      Создайте класс студент со свойствами имя, фамилия и фраза приветствия.
+//      Создайте 10 - 15 объектов этого класса.
+    NSMutableArray * studentObject = [[NSMutableArray alloc] init];
+    NSMutableArray * studentKeys = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 15; i++) {
+        Student *stud = [Student new];
+        stud.name = [NSString stringWithFormat:@"Alex%d", i];
+        stud.lastName = [NSString stringWithFormat:@"Panfilov%d", i];
+        stud.hiSay = [NSString stringWithFormat:@"%dHi!", i];
+        [studentObject addObject:stud];
+        [studentKeys addObject:[NSString stringWithFormat:@"%@ %@", [studentObject[i] name], [studentObject[i] lastName]]];
+    }
+
+//      Теперь мы создадим дикшинари типо школьный журнал, где ключ будет фамилия + имя, а значение сам студент.
+    NSDictionary * dictionary = [NSDictionary dictionaryWithObjects:studentObject forKeys:studentKeys];
+#pragma mark -SchoolBOy-
+//      Распечатайте дикшинари
+    NSLog(@"=================================");
+    NSLog(@"%@ ", [dictionary allKeys]);
+    
+//    Уровень Студент.
+//      В цикле пройдемся по всем ключам в дикшинари и распечатаем имя и фамилию каждого студента + его фразу приветствия.
+    NSLog(@"=================================");
+#pragma mark -Student-
+    for (NSString *key in dictionary) {
+        NSLog(@"%@ My name is %@",[dictionary[key] hiSay],key);
+    }
+//    Уровень Мастер.
+//      Чтобы сделать тоже самое но по какому-то порядку, отсортируйте массив ключей по возрастанию и выведите приветствие каждого студента из дикшинари, но уже по отсортированному списку.
+    NSLog(@"=================================");
+#pragma mark -Master-
+    NSArray * sortedDictionary =[dictionary keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        return [[obj1 lastName] compare:[obj2 lastName]];
+    }];
+    
+    for (int i = 0; i <[sortedDictionary count]; i++) {
+        
+        
+        id obj = [sortedDictionary objectAtIndex:i];
+        
+        NSLog(@"%@ My name is %@",[dictionary[obj] hiSay], obj);
+    }
+    
     return YES;
 }
 
